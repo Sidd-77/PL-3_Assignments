@@ -20,6 +20,7 @@ const App = () => {
 
   function getData(apiUrl) {
     axios.get(apiUrl).then(response => {
+      console.log(response);
       setUsers(response.data.results);
       setNext(response.data.next);
       setPrev(response.data.previous);
